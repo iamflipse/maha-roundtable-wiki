@@ -1,0 +1,7 @@
+[book]
+title = "MAHA Roundtable — American Health & Nutrition: A Second Opinion"
+authors = ["iamflipse"]
+description = "Curated wiki distilling the MAHA roundtable on American health and nutrition, convened by Sen. Ron Johnson with Robert F. Kennedy Jr. and a panel of doctors, nutritionists, and food advocates."
+
+[build]
+charset = "utf-8"

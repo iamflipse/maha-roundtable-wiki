@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Regulatory Capture - MAHA Roundtable — American Health &amp; Nutrition: A Second Opinion</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Curated wiki distilling the MAHA roundtable on American health and nutrition, convened by Sen. Ron Johnson with Robert F. Kennedy Jr. and a panel of doctors, nutritionists, and food advocates.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">2.</strong> About this wiki</a></li><li class="chapter-item expanded affix "><li class="part-title">Concepts</li><li class="chapter-item expanded "><a href="../concepts/us-healthcare-crisis.html"><strong aria-hidden="true">3.</strong> The US Health Care Crisis</a></li><li class="chapter-item expanded "><a href="../concepts/ultra-processed-foods.html"><strong aria-hidden="true">4.</strong> Ultra-Processed Foods</a></li><li class="chapter-item expanded "><a href="../concepts/metabolic-dysfunction.html"><strong aria-hidden="true">5.</strong> Metabolic Dysfunction</a></li><li class="chapter-item expanded "><a href="../concepts/ketogenic-lion-diet.html"><strong aria-hidden="true">6.</strong> Ketogenic & Lion Diets</a></li><li class="chapter-item expanded "><a href="../concepts/toxic-chemicals.html"><strong aria-hidden="true">7.</strong> Toxic Chemicals & Glyphosate</a></li><li class="chapter-item expanded "><a href="../concepts/regulatory-capture.html" class="active"><strong aria-hidden="true">8.</strong> Regulatory Capture</a></li><li class="chapter-item expanded "><a href="../concepts/mental-health-metabolic.html"><strong aria-hidden="true">9.</strong> Mental Health Is Metabolic</a></li><li class="chapter-item expanded "><a href="../concepts/childrens-health.html"><strong aria-hidden="true">10.</strong> Children's Health & Fertility</a></li><li class="chapter-item expanded "><a href="../concepts/food-as-medicine.html"><strong aria-hidden="true">11.</strong> Food as Medicine</a></li><li class="chapter-item expanded affix "><li class="part-title">Sources</li><li class="chapter-item expanded "><a href="../sources/maha-roundtable-transcript.html"><strong aria-hidden="true">12.</strong> Full Transcript</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">MAHA Roundtable — American Health &amp; Nutrition: A Second Opinion</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="regulatory-capture"><a class="header" href="#regulatory-capture">Regulatory Capture</a></h1>
+<p><em>Source: <a href="../sources/maha-roundtable-transcript.html">RFK Jr., Callie Means closing, and Q&amp;A</a></em></p>
+<h2 id="the-capture-pattern"><a class="header" href="#the-capture-pattern">The capture pattern</a></h2>
+<ul>
+<li><strong>FDA:</strong> ~75% of its funding comes from the pharma industry it regulates; FDA commissioners cycle onto pharma boards (Pfizer example).</li>
+<li><strong>NIH:</strong> 80% of grants go to people with conflicts of interest; scientists collect ~$150K/yr royalties on products they develop; 90% of NIH funding = incremental pharma R&amp;D, not root-cause research.</li>
+<li><strong>USDA:</strong> 95% of the 2020 dietary-guidelines committee had food-industry COIs; sugar still &quot;healthy&quot; for 2-year-olds per the guidelines.</li>
+<li><strong>SNAP:</strong> ~10% goes to sugary drinks, <strong>~70% to UPF</strong> — underwriting the poisoning of lower-income populations; Medicaid then absorbs the chronic-disease costs.</li>
+<li><strong>Media:</strong> ~47% of mainstream media ad revenue comes from companies that profited during the pandemic; &quot;no-fly zone&quot; for questioning orthodoxy.</li>
+<li><strong>Politics:</strong> pharma out-spends the oil industry 5× on donations/lobbying; 100+ members support Medicare funding for OIC ($1,500/mo) while taking money from Novo Nordisk.</li>
+</ul>
+<h2 id="callie-means-two-simple-things-closing"><a class="header" href="#callie-means-two-simple-things-closing">Callie Means' &quot;two simple things&quot; (closing)</a></h2>
+<ol>
+<li><strong>Get corruption out of the science/guidelines:</strong>
+<ul>
+<li>Disallow USDA guideline writers from taking food-industry money.</li>
+<li>Reset NIH's mission to foundational &quot;why are we getting sick&quot; research (not outsourced pharma R&amp;D).</li>
+<li>Untangle FDA from pharma funding; disaggregate the F and the D.</li>
+</ul>
+</li>
+<li><strong>Open up health-care flexibility:</strong>
+<ul>
+<li>Doctors can write letters of medical necessity for food/exercise → unlock HSA/HRA spending.</li>
+<li>Clinically right info: heart disease ≠ statin deficiency; diabetes ≠ metformin deficiency; depression ≠ SSRI deficiency.</li>
+<li>Food as medicine is the <strong>center</strong> of health care, not a &quot;fringe&quot; or &quot;prevention&quot; bucket — regenerative farming, exercise = healthcare.</li>
+</ul>
+</li>
+</ol>
+<h2 id="rfk-jrs-framing"><a class="header" href="#rfk-jrs-framing">RFK Jr.'s framing</a></h2>
+<ul>
+<li>&quot;A broken system fueled by corruption and collusion&quot;; Eisenhower's warning about the <strong>scientific-industrial complex</strong> (rarely-cited second half of that speech — raised by Brigham).</li>
+<li>The system isn't broken, it's <strong>rigged</strong> (Brigham): &quot;the most valuable asset is a sick child.&quot;</li>
+<li><strong>Ask:</strong> top-down: remove money from politics (Citizens United), flexible spending accounts, trust the American patient.</li>
+</ul>
+<p><strong>Cross-links:</strong> <a href="us-healthcare-crisis.html">US health care crisis</a> · <a href="food-as-medicine.html">Food as medicine</a> · <a href="ultra-processed-foods.html">UPF</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../concepts/toxic-chemicals.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../concepts/mental-health-metabolic.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../concepts/toxic-chemicals.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../concepts/mental-health-metabolic.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
